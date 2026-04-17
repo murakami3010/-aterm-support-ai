@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#dce8f8"/>
+  <!-- Hair -->
+  <ellipse cx="32" cy="21" rx="11" ry="10" fill="#5c3d1e"/>
+  <rect x="21" y="21" width="22" height="6" fill="#5c3d1e"/>
+  <!-- Head -->
+  <ellipse cx="32" cy="25" rx="10" ry="11" fill="#f4c896"/>
+  <!-- Eyes -->
+  <circle cx="28" cy="24" r="1.4" fill="#333"/>
+  <circle cx="36" cy="24" r="1.4" fill="#333"/>
+  <!-- Eye shine -->
+  <circle cx="28.6" cy="23.4" r="0.5" fill="#fff"/>
+  <circle cx="36.6" cy="23.4" r="0.5" fill="#fff"/>
+  <!-- Eyebrows -->
+  <path d="M26 21.5 Q28 20.5 30 21.5" stroke="#5c3d1e" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <path d="M34 21.5 Q36 20.5 38 21.5" stroke="#5c3d1e" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <!-- Nose -->
+  <path d="M31 27 Q32 29 33 27" stroke="#e09070" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <!-- Smile -->
+  <path d="M28.5 30 Q32 33 35.5 30" stroke="#c0845a" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <!-- Neck -->
+  <rect x="28" y="35" width="8" height="7" rx="3" fill="#f4c896"/>
+  <!-- Shirt / body -->
+  <path d="M18 58 Q18 44 32 44 Q46 44 46 58 Z" fill="#4a90d9"/>
+  <!-- Collar -->
+  <path d="M28 42 L32 46 L36 42" stroke="#3a7bc8" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <!-- Shoulders -->
+  <path d="M18 47 Q13 46 12 52 L18 52 Z" fill="#4a90d9"/>
+  <path d="M46 47 Q51 46 52 52 L46 52 Z" fill="#4a90d9"/>
+</svg>
