@@ -1,1 +1,54 @@
+#仕様設定
+version: 0.2
 
+#phases:build処理を順番に区切ったもの
+phases:
+#install:環境設定のためインストールするフェーズ
+  install:
+  #ランタイム：コード実行するための環境、ver
+    runtime-versions:
+      #ver指定
+      nodejs: 20
+    #コマンド入力
+    #echo→文字表示
+    #cd web:webに移動
+    #&&右が成功したら左の処理へ
+    #npm install:インストール
+    commands:
+      - echo "Installing dependencies..."
+      - cd web && npm install
+
+#buildフェーズ
+  build:
+    #echo→文字表示
+    #cd web:webに移動
+    #&&右が成功したら左の処理へ
+    #npm run build:ビルドを走らせる
+    #web/package.jsonをweb/dist/package.jsonにコピー
+    commands:
+      - echo "Building web app..."
+      - cd web && npm run build
+      - cp web/package.json web/dist/package.json
+
+  #build完了後に実行するフェーズ
+  post_build:
+    #echo→文字表示
+    #cd web/dist
+    #&&右が成功したら左の処理へ
+    #zip:圧縮
+    #-r:フォルダごと全部
+    #../../build.zip:保存場所
+    #../:１つ上の階層
+    #../../build.zip:2つ上の階層にbuild.zip を作る
+    #.:これがないと
+    commands:
+      - echo "Packaging build artifacts..."
+      - cd web/dist && zip -r ../../build.zip .
+
+#次の処理に渡すフェーズ
+artifacts:
+  #build.zipを次の工程に渡す
+  files:
+    - build.zip
+  #ディレクトリを無視できる設定
+  discard-paths: yes
